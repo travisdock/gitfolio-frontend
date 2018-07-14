@@ -1,0 +1,227 @@
+%flexy {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+%font {
+  font-family: "Poppins", "Helvetica", sans-serif;
+}
+
+%basic-button {
+  background: #006AAC;
+  color: white;
+  border: none;
+  padding: .5rem .9rem;
+  margin: .5rem;
+  font-size: 1.5rem;
+  transition: background 150ms;
+  margin: 1rem auto;
+  display: block;
+  &:hover {
+    background: #1D88E3;
+  }
+  &:active {
+    background: #6EB0E8;
+  }
+}
+
+$bg-b: rgba(0,0,0,.5);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+input[type="submit"], button {
+  @extend %basic-button;
+}
+
+html { 
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  padding: 0 0 1.5rem 0;
+  margin: 0;
+  align-items: center;
+  background: #006AAC;
+  background: rgba(0, 106, 172, .9);
+  border: none;
+  width: 100%;
+  @extend %font;
+  color: #FFF;
+  h1 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 5rem;
+    display: block;
+    margin: 0;
+  }
+  p {
+    margin: 0 auto;
+    width:90%;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+  }
+}
+
+.main-holder {
+  margin: 2rem auto;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  background: $bg-b;
+  width: 100%;
+  max-width: 28rem;
+  color: white;
+  @extend %font;
+  font-weight: 100;
+}
+
+form {
+  padding-bottom: .5rem;
+  label {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 1rem auto;
+  }
+  #username-input {
+    display: block;
+    margin: 1rem auto;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  ul {
+    background: white;
+    color: black;
+    width: 70%;
+    padding-left: .5rem;
+    margin: 1rem auto;
+    height: 8rem;
+    overflow: scroll;
+  } 
+  #username-submit {
+    @extend %basic-button;
+  }
+}
+#template-styles-h {
+  width: 100%;
+  max-width: 70rem;
+  @extend %flexy;
+  justify-content: space-around;
+  #template-button-h {
+    @extend #styles-h;
+    .code-template {
+      height: 20rem;
+    }
+  }
+  #styles-h {
+    width: 45%;
+    min-width: 20rem;
+    margin: 0 1rem;
+  }
+}
+
+.code-template {
+  background: white;
+  color: #000;
+  width: 100%;
+  height: 10rem;
+  margin-top: .5rem;
+  overflow: scroll;
+  font-family: monospace;
+  p {
+    margin: 1rem .5rem;
+  }
+}
+
+.code-holder { 
+  position: relative;
+  padding: 0;
+  .template-header {
+    display: inline-block;
+    margin: 1rem 0 .2rem;
+    font-style: italic;
+    margin-right: 1rem;
+  }
+  .copy-button {
+    @extend .template-header;
+    font-size: 1rem;
+    font-style: normal;
+  }
+}
+
+.hidden {
+  position: absolute;
+  top: -1000000px;
+}
+
+#preview-h {
+  #preview-heading {
+    text-align: center;
+  }
+  #preview-text{
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+    font-style: italic;
+  }
+}
+
+
+#preview-code {
+  .card {
+    background: white;
+    color: black;
+    margin: 1rem auto;
+    display: flex;
+    img {
+      height: 10rem;
+      background: black;
+      display: block;
+    }
+    .card-body {
+      margin: 1rem;
+      #github-name {
+      }
+      #github-title {
+      }
+      .repo-name {
+      }
+      .repo-link {
+      }
+      .repo-langs {
+      }
+    }
+
+  }
+}
+
+footer {
+  margin: 3rem 0 0;
+  padding: 1rem 0;
+  background: black;
+  @extend %font;
+  color: gray;
+  text-align: center;
+  font-size: .8rem;
+  p {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}

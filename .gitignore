@@ -1,0 +1,5 @@
+*.swp
+*.swo
+css/style.css.map
+js/.user.js.swp
+js/.repository.js.swp

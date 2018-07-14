@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>GitFolio</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Muli:400,400i" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>GitFolio</h1>
+      <p>Adding pinned GitHub repos to your portfolio site has never been easier</p>
+    </header>
+
+    <div id="username-h" class="main-holder holder">
+      <form action="" method="post">
+        <label for="username-input">Select your GitHub username:</label>
+        <ul id="users"></ul>
+        <label>Or enter it here:</label>
+        <input type="text" id="username-input"/>
+        <input type="submit" id="username-submit" value="create HTML code" />
+      </form>
+
+    </div>
+
+
+    <div id="template-styles-h" class="main-holder">
+
+      <div id="template-button-h" >
+        <div id="template" class="code-holder">
+          <p class="template-header">HTML code</p>
+          <button type="submit" id="html" class="copy-button">Copy</button>
+          <div class="code-template" >
+            <p id="html-code" >HTML BLOCKS HERE</p>
+          </div>
+          <input type="text" id="html-code-hidden" class="hidden"/>
+        </div>
+         <button type="submit" id="refresh" data-username="none">Refresh Repos</button>
+      </div>
+
+      <div id="styles-h" class="holder">
+        <div id="css-style" class="code-holder styling">
+           <p class="template-header">CSS code</p>
+           <button type="submit" id="css" class="copy-button">Copy</button>
+           <div class="code-template" >
+             <p id="css-code"></p>
+           </div>
+           <input type="text" id="css-code-hidden" class="hidden" value=".card {
+                background: white;
+                color: black;
+                margin: 1rem auto;
+                display: flex;
+                }
+                .card-img {
+                  height: 10rem;
+                  background: black;
+                  display: block;
+                }
+                .card-body {
+                  margin: 1rem;
+                }
+                #github-name {
+                }
+                #github-title {
+                }
+                .repo-name {
+                }
+                .repo-link {
+                }
+                .repo-langs {
+                }"/>
+        </div>
+        <div id="sass-style" class="code-holder styling">
+           <p class="template-header">SASS code</p>
+           <button type="submit" id="sass" class="copy-button">Copy</button>
+           <div class="code-template" >
+             <p id="sass-code">
+
+            </p>
+           </div>
+           <input type="text" id="sass-code-hidden" class="hidden" value=".card {
+                background: white;
+                color: black;
+                margin: 1rem auto;
+                display: flex;
+                .card-img {
+                  height: 10rem;
+                  background: black;
+                  display: block;
+                }
+                .card-body {
+                  margin: 1rem;
+                  #github-name {
+                  }
+                  #github-title {
+                  }
+                  .repo-name {
+                  }
+                  .repo-link {
+                  }
+                  .repo-langs {
+                  }
+                }
+
+              }"/>
+        </div>
+      </div>
+    </div>
+    <div id="preview-h" class="main-holder">
+       <h1 id="preview-heading">Preview</h1>
+       <p id="preview-text">This is what the basic layout will look like if you just copy the HTML and styling into your site</p>
+       <div id="preview-code">
+       </div>
+    </div>
+    <footer>
+      <p>This site was made by Saige, Travis, and Mike at Access Labs. All rights reserved. All of them, every single one. They're all ours.</p>
+    </footer>
+    <script src="js/adapter.js" charset="utf-8"></script>
+    <script src="js/user.js" charset="utf-8"></script>
+    <script src="js/repository.js" charset="utf-8"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+  </body>
+</html>
